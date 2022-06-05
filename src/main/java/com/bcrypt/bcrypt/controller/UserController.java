@@ -1,7 +1,7 @@
 package com.bcrypt.bcrypt.controller;
 
-import com.codefellows.bcryptdemod14.model.SiteUser;
-import com.codefellows.bcryptdemod14.repository.SiteUserRepository;
+import com.bcrypt.bcrypt.model.SiteUser;
+import com.bcrypt.bcrypt.repository.SiteUserRepository;
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,6 +22,20 @@ public class UserController
     public String getLoginPage()
     {
         return "index.html";
+    }
+
+    @GetMapping("/signup")
+    public String getSignUpPage(){
+        return "signup.html";
+    }
+
+    @PostMapping("/signup")
+    public RedirectView signup(String username, String password)
+    {
+        String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
+        SiteUser newUser = new SiteUser(username, hashedPassword);
+        siteUserRepository.save(newUser);
+        return new RedirectView("/");
     }
 
     @PostMapping("/login")
@@ -45,19 +59,5 @@ public class UserController
         }
     }
 
-    @GetMapping("/signup")
-    public String getSignupPage()
-    {
-        return "signup.html";
-    }
 
-    @PostMapping("/signup")
-    public RedirectView signup(String username, String password)
-    {
-        String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());  // use default of 10
-        SiteUser newUser = new SiteUser(username, hashedPassword);
-        siteUserRepository.save(newUser);
-
-        return new RedirectView("/");
-    }
 }
