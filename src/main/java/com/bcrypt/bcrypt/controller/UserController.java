@@ -42,14 +42,9 @@ public class UserController
     public RedirectView login(String username, String password)
     {
         SiteUser userFromDB = siteUserRepository.findByUsername(username);
-        if (userFromDB == null)
-        {
-            return new RedirectView("/");
-        }
-
+//        String hashedPassword = BCrypt.hashpw()
         boolean isPasswordCorrect = BCrypt.checkpw(password, userFromDB.getPassword());
-
-        if (!isPasswordCorrect)
+        if (userFromDB == null || !isPasswordCorrect)
         {
             return new RedirectView("/");
         }
