@@ -5,9 +5,7 @@ import java.util.List;
 
 @Entity
 public class SiteUser {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    long id;
+    @Id @GeneratedValue(strategy = GenerationType.AUTO) long id;
     String username;
     String password;
 

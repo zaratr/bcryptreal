@@ -41,13 +41,13 @@ public class UserController
     @PostMapping("/login")
     public RedirectView login(String username, String password)
     {
-        SiteUser loggingInUser = siteUserRepository.findByUsername(username);
-        if (loggingInUser == null)
+        SiteUser userFromDB = siteUserRepository.findByUsername(username);
+        if (userFromDB == null)
         {
             return new RedirectView("/");
         }
 
-        boolean isPasswordCorrect = BCrypt.checkpw(password, loggingInUser.getPassword());
+        boolean isPasswordCorrect = BCrypt.checkpw(password, userFromDB.getPassword());
 
         if (!isPasswordCorrect)
         {
