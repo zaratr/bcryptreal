@@ -21,7 +21,7 @@ public class HomeController
     PostsRepository postsRepository;
 
     @GetMapping("/home/{username}")
-    public String getSecretPage(@PathVariable String username, Model mdl)
+    public String getHome(@PathVariable String username, Model mdl)
     {
         SiteUser siteUserToView = siteUserRepository.findByUsername(username);
         mdl.addAttribute("username", username.toLowerCase());
