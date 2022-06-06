@@ -33,8 +33,8 @@ public class UserController
     public RedirectView signup(String username, String password)
     {
         String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
-        SiteUser newUser = new SiteUser(username, hashedPassword);
-        siteUserRepository.save(newUser);
+        SiteUser newSiteUser = new SiteUser(username, hashedPassword);
+        siteUserRepository.save(newSiteUser);
         return new RedirectView("/");
     }
 
@@ -58,6 +58,7 @@ public class UserController
             return new RedirectView("/home/" + username);
         }
     }
+
 
 
 }
