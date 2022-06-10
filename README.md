@@ -28,13 +28,26 @@ Time spent: 1 hours
 Actual time spent: 3
 ****
 
-### Feature Tasks - (16) start a app
+### Feature Tasks - (16) using bcrypt 
 - The site should have a login page
 - An ApplicationUser should have a username, password (will be hashed using BCrypt), firstName, lastName, dateOfBirth, bio, and any other fields you think are useful.
 - The site should allow users to create an ApplicationUser on the “sign up” page.
 ## Contribution
 - Jason Wilson - https://github.com/WilsonJhub/codefellowship/pull/9
 - https://github.com/WilsonJhub/codefellowship/pull/13
-Time spent: 1 hours
-Actual time spent: 3
+- Time spent: 3 hours
+- Actual time spent: 5
 ****
+
+### Feature Tasks - (17) allow ManyToMany relationship
+- Allow users to log in to CodeFellowship, view user profiles, and create posts.
+##Contributors
+Jason Wilson - https://github.com/WilsonJhub/codefellowship/pull/9
+- https://github.com/WilsonJhub/codefellowship/pull/13
+- Time Spent: 3 hours
+- Actual Time spent: 5 hours
+
+### Feature Tasks - (18 - Optional)
+- Ensure that users can’t perform SQL injection or HTML injection with their posts.
+- Allow users to follow other users. Following a user means that their posts show up in the logged-in user’s feed, where they can see what all of their followed users have posted recently.
+### Contributors
