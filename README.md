@@ -16,7 +16,7 @@
 - [JBCRYPT - Website](https://www.mindrot.org/projects/jBCrypt/)
 - [seattle-code-java-401d14](https://github.com/codefellows/seattle-code-java-401d14)
 ****
-### Feature Tasks - start a app
+### Feature Tasks - (14) start a app
 - Create a database.
 - Create a table that models users with a username, id, and hashed password.
 - Create a table that models posts with a postId, userId and text content.
@@ -28,3 +28,12 @@ Time spent: 1 hours
 Actual time spent: 3
 ****
 
+### Feature Tasks - (16) start a app
+- The site should have a login page
+- An ApplicationUser should have a username, password (will be hashed using BCrypt), firstName, lastName, dateOfBirth, bio, and any other fields you think are useful.
+- The site should allow users to create an ApplicationUser on the “sign up” page.
+## Contribution
+- Jason Wilson - https://github.com/WilsonJhub/codefellowship/pull/9
+Time spent: 1 hours
+Actual time spent: 3
+****
