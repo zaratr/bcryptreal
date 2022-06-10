@@ -34,6 +34,7 @@ Actual time spent: 3
 - The site should allow users to create an ApplicationUser on the “sign up” page.
 ## Contribution
 - Jason Wilson - https://github.com/WilsonJhub/codefellowship/pull/9
+- https://github.com/WilsonJhub/codefellowship/pull/13
 Time spent: 1 hours
 Actual time spent: 3
 ****
