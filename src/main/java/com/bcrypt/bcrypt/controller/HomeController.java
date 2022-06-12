@@ -28,7 +28,7 @@ public class HomeController
         mdl.addAttribute("username", username.toLowerCase());
         mdl.addAttribute("siteUser", siteUserToView);
         mdl.addAttribute("posts", siteUserToView.getPostsList());
-        return "home.html";
+        return "/home.html";
     }
 
     @PostMapping("/add-post")
